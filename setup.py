@@ -17,6 +17,7 @@ setup(name='beaker_extensions',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=False,
+      use_2to3=True,
       install_requires=[
           # -*- Extra requirements: -*-
       ],
