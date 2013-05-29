@@ -64,7 +64,7 @@ class RedisManager(NoSqlManager):
         self.db_conn.delete(self._format_key(key))
 
     def _format_key(self, key):
-        return 'beaker:%s:%s' % (self.namespace, key.replace(' ', '\302\267'))
+        return 'beaker:%s:%s' % (self.namespace, key.replace(b' ', b'\302\267'))
 
     def _format_pool_key(self, host, port, db):
         return '{0}:{1}:{2}'.format(host, port, self.db)
